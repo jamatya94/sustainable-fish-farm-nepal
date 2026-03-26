@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: #f2f2ee;
+  --surface: #ffffff;
+  --text: #2d2d2a;
+  --text-muted: #5f615d;
+  --line: #e2e2dc;
+  --brand-green-900: #135a4b;
+  --brand-green-800: #165f4f;
+  --brand-green-700: #1d6a58;
+  --brand-green-400: #4d9786;
+  --accent-orange: #cc5a2d;
+  --accent-orange-hover: #b94f27;
+  --icon-gold: #d7ae56;
+  --quote-highlight: #e6e0d1;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-text antialiased;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accentOrange focus-visible:ring-offset-2 focus-visible:ring-offset-canvas;
+  }
+
+  ::selection {
+    @apply bg-quoteHighlight text-brandGreen900;
+  }
+}
+
+@layer components {
+  .primary-nav-text {
+    @apply text-[0.98rem] font-semibold tracking-[0.01em] text-text;
+  }
+
+  .hero-title {
+    @apply text-4xl font-semibold leading-[0.93] tracking-[-0.04em] md:text-6xl lg:text-[4.85rem];
+  }
+
+  .hero-body {
+    @apply text-lg leading-8 text-white/90 md:text-xl;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold leading-[1.02] tracking-[-0.03em] md:text-5xl;
+  }
+
+  .section-intro {
+    @apply text-[1.05rem] leading-8 text-textMuted md:text-[1.16rem];
+  }
+
+  .card-title {
+    @apply text-xl font-semibold leading-snug tracking-[-0.02em];
+  }
+
+  .card-body {
+    @apply text-base leading-7 text-textMuted;
+  }
+
+  .article-label {
+    @apply text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-brandGreen700;
+  }
+
+  .article-title {
+    @apply text-2xl font-semibold leading-snug tracking-[-0.02em] md:text-3xl;
+  }
+
+  .article-excerpt {
+    @apply text-base leading-7 text-textMuted md:text-lg;
+  }
+
+  .article-date {
+    @apply text-sm uppercase tracking-[0.14em] text-textMuted;
+  }
+
+  .quote-text {
+    @apply text-[1.9rem] font-semibold leading-[1.08] tracking-[-0.035em] text-brandGreen900 md:text-[3.25rem];
+  }
+
+  .button-text {
+    @apply text-sm font-semibold uppercase tracking-[0.15em];
+  }
+
+  .footer-links {
+    @apply text-sm font-semibold uppercase tracking-[0.12em] text-white transition;
+  }
+
+  .editorial-grid {
+    @apply grid gap-8 md:gap-10 lg:gap-12;
+  }
+
+  .editorial-rule {
+    @apply h-px w-16 bg-brandGreen400;
+  }
+}

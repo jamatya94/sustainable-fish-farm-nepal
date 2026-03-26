@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#1D6A58"/>
+  <rect x="88" y="88" width="1424" height="724" stroke="#F2F2EE" stroke-opacity="0.25" stroke-width="2"/>
+  <path d="M0 677C139 613 252 584 339 591C448 600 574 685 699 685C833 685 945 539 1086 539C1243 539 1359 640 1600 707V900H0V677Z" fill="#135A4B"/>
+  <text x="800" y="430" fill="#F2F2EE" font-family="Arial, sans-serif" font-size="34" letter-spacing="5" text-anchor="middle">HERO PLACEHOLDER</text>
+</svg>

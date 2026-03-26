@@ -1,0 +1,26 @@
+export const siteTokens = {
+  colors: {
+    canvas: "#F2F2EE",
+    surface: "#FFFFFF",
+    text: "#2D2D2A",
+    textMuted: "#5F615D",
+    line: "#E2E2DC",
+    brandGreen900: "#135A4B",
+    brandGreen800: "#165F4F",
+    brandGreen700: "#1D6A58",
+    brandGreen400: "#4D9786",
+    accentOrange: "#CC5A2D",
+    accentOrangeHover: "#B94F27",
+    iconGold: "#D7AE56",
+    quoteHighlight: "#E6E0D1",
+  },
+  layout: {
+    maxWidth: "1440px",
+    wideCanvasWidth: "1840px",
+    contentWidth: "980px",
+    readingWidth: "720px",
+    desktopGutter: "32px",
+    tabletGutter: "24px",
+    mobileGutter: "16px",
+  },
+} as const;
