@@ -2,9 +2,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { DonationSplitBanner } from "@/components/cta/DonationSplitBanner";
 import { NewsletterSignupBar } from "@/components/cta/NewsletterSignupBar";
 import { ViewMoreButton } from "@/components/cta/ViewMoreButton";
-import { FeaturedStoryBlock } from "@/components/content/FeaturedStoryBlock";
 import { ProofCardRow } from "@/components/content/ProofCardRow";
-import { SectionIntro } from "@/components/content/SectionIntro";
 import { StoryGrid } from "@/components/content/StoryGrid";
 import { TestimonialFeature } from "@/components/content/TestimonialFeature";
 import { ContentContainer } from "@/components/layout/ContentContainer";
@@ -44,25 +42,16 @@ export default function HomePage() {
           cta={content.hero.cta}
         />
 
-        <section className="pb-14 pt-0 md:pb-20">
-          <ContentContainer width="wide" padding="edge" className="space-y-10 md:space-y-14">
+        <section className="pb-8 pt-6 md:pb-10 md:pt-8">
+          <ContentContainer width="wide" padding="edge" className="space-y-5 md:space-y-7">
+            <div className="flex justify-center">
+              <p className="article-label">{content.proofIntro.label}</p>
+            </div>
             <ProofCardRow cards={[...content.proofCards]} />
-            <SectionIntro
-              label={content.proofIntro.label}
-              title={content.proofIntro.title}
-              body={content.proofIntro.body}
-              align="center"
-            />
           </ContentContainer>
         </section>
 
-        <section className="py-6 md:py-8">
-          <ContentContainer width="wide" padding="edge">
-            <DonationSplitBanner {...content.donationBanner} />
-          </ContentContainer>
-        </section>
-
-        <section className="py-14 md:py-20">
+        <section className="py-8 md:py-10">
           <ContentContainer width="wide" padding="edge">
             <TestimonialFeature
               label={content.testimonial.label}
@@ -72,18 +61,7 @@ export default function HomePage() {
           </ContentContainer>
         </section>
 
-        <section className="py-6 md:py-8">
-          <ContentContainer width="wide" padding="edge">
-            <NewsletterSignupBar
-              title={content.newsletter.title}
-              body={content.newsletter.body}
-              placeholder={content.newsletter.placeholder}
-              buttonLabel={content.newsletter.buttonLabel}
-            />
-          </ContentContainer>
-        </section>
-
-        <section className="py-14 md:py-20">
+        <section className="py-8 md:py-10">
           <ContentContainer width="wide" padding="edge">
             <SectionImageSlab
               label={content.campaign.label}
@@ -97,21 +75,7 @@ export default function HomePage() {
           </ContentContainer>
         </section>
 
-        <section className="py-14 md:py-20">
-          <ContentContainer width="wide" padding="edge">
-            <FeaturedStoryBlock
-              label={content.inFocus.label}
-              title={content.inFocus.title}
-              excerpt={content.inFocus.excerpt}
-              date={content.inFocus.date}
-              href={content.inFocus.cta.href}
-              linkLabel={content.inFocus.cta.label}
-              thumbnails={[...content.inFocus.thumbnails]}
-            />
-          </ContentContainer>
-        </section>
-
-        <section className="py-14 md:py-20">
+        <section className="py-8 md:py-10">
           <ContentContainer width="wide" padding="edge">
             <SectionImageSlab
               label={content.insights.label}
@@ -127,7 +91,7 @@ export default function HomePage() {
           </ContentContainer>
         </section>
 
-        <section className="py-14 md:py-20">
+        <section className="py-8 md:py-10">
           <ContentContainer
             width="wide"
             padding="edge"
@@ -146,6 +110,23 @@ export default function HomePage() {
               />
             </div>
             <StoryGrid items={[...content.features.items]} />
+          </ContentContainer>
+        </section>
+
+        <section className="py-4 md:py-5">
+          <ContentContainer width="wide" padding="edge">
+            <DonationSplitBanner {...content.donationBanner} />
+          </ContentContainer>
+        </section>
+
+        <section className="py-4 md:py-5">
+          <ContentContainer width="wide" padding="edge">
+            <NewsletterSignupBar
+              title={content.newsletter.title}
+              body={content.newsletter.body}
+              placeholder={content.newsletter.placeholder}
+              buttonLabel={content.newsletter.buttonLabel}
+            />
           </ContentContainer>
         </section>
       </main>

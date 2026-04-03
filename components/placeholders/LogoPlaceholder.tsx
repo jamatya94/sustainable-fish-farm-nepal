@@ -30,12 +30,12 @@ export function LogoPlaceholder({
           className={`inline-flex text-white ${className}`.trim()}
           aria-label="Homepage"
         >
-          <span className="relative block h-16 w-16 md:h-[4.5rem] md:w-[4.5rem]">
+          <span className="relative block h-10 w-10 md:h-11 md:w-11">
             <Image
               src={resolvedLogo.src}
               alt={resolvedLogo.alt}
               fill
-              sizes="72px"
+              sizes="44px"
               className="object-contain object-left-top"
               onError={() => setHasError(true)}
             />
@@ -73,7 +73,7 @@ export function LogoPlaceholder({
         className={`inline-flex text-white ${className}`.trim()}
         aria-label="Homepage"
       >
-        <div className="flex h-16 w-16 items-center justify-center border border-white/35 bg-transparent text-[0.68rem] font-bold uppercase tracking-[0.18em] md:h-[4.5rem] md:w-[4.5rem]">
+        <div className="flex h-10 w-10 items-center justify-center border border-white/35 bg-transparent text-[0.58rem] font-bold uppercase tracking-[0.18em] md:h-11 md:w-11">
           S F
         </div>
       </Link>
