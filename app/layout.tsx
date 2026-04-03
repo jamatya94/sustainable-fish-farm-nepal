@@ -3,8 +3,12 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Placeholder Nonprofit Homepage",
-  description: "Production-ready nonprofit homepage scaffold with local placeholder content.",
+  title: {
+    default: "Sustainable Fish Farming Initiative",
+    template: "%s | Sustainable Fish Farming Initiative",
+  },
+  description:
+    "A women-led social enterprise advancing food security, nutrition, and rural livelihoods across South Asia through sustainable aquaculture and community-rooted innovation.",
 };
 
 export default function RootLayout({

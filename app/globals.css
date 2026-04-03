@@ -90,7 +90,7 @@
   }
 
   .quote-text {
-    @apply text-[1.9rem] font-semibold leading-[1.08] tracking-[-0.035em] text-brandGreen900 md:text-[3.25rem];
+    @apply text-[1.48rem] font-semibold leading-[1.08] tracking-[-0.032em] text-brandGreen900 md:text-[1.8rem] lg:text-[1.95rem] xl:text-[2.05rem];
   }
 
   .button-text {

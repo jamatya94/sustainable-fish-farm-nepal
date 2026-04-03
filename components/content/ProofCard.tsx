@@ -1,19 +1,36 @@
+import Image from "next/image";
+
 type ProofCardProps = {
   index: number;
-  stat: string;
+  illustration: {
+    src: string;
+    alt: string;
+  };
   title: string;
   body: string;
 };
 
-export function ProofCard({ index, stat, title, body }: ProofCardProps) {
+export function ProofCard({ index, illustration, title, body }: ProofCardProps) {
   return (
-    <article className="flex h-full flex-col border-b border-line bg-transparent px-0 py-8 md:px-6 xl:border-b-0 xl:border-r xl:py-10 xl:first:pl-0 xl:last:border-r-0 xl:last:pr-0">
-      <p className="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-textMuted">
-        {String(index).padStart(2, "0")}
+    <article className="flex h-full flex-col items-center px-6 py-10 text-center md:px-8 xl:px-10 xl:py-12">
+      <span className="sr-only">Proof card {index}</span>
+      <div className="flex h-[9.5rem] w-[9.5rem] items-center justify-center overflow-hidden rounded-full bg-[#E6BF63] md:h-[10.5rem] md:w-[10.5rem]">
+        <div className="relative h-[86%] w-[86%]">
+          <Image
+            src={illustration.src}
+            alt={illustration.alt}
+            fill
+            sizes="(min-width: 1280px) 168px, (min-width: 768px) 160px, 144px"
+            className="object-contain"
+          />
+        </div>
+      </div>
+      <h3 className="mt-8 max-w-[14rem] text-[2rem] font-semibold leading-[1.02] tracking-[-0.04em] text-text md:text-[2.2rem]">
+        {title}
+      </h3>
+      <p className="mt-4 max-w-[15rem] text-[1rem] leading-[1.65] text-textMuted md:text-[1.06rem]">
+        {body}
       </p>
-      <p className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-brandGreen900 md:text-6xl">{stat}</p>
-      <h3 className="card-title mt-5 max-w-[13rem]">{title}</h3>
-      <p className="card-body mt-4 max-w-[15rem]">{body}</p>
     </article>
   );
 }

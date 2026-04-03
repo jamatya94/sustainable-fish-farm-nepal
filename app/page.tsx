@@ -13,6 +13,12 @@ import { SectionImageSlab } from "@/components/layout/SectionImageSlab";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { homepageContent } from "@/data/homepageContent";
 
+export const metadata = {
+  title: "Sustainable Fish Farming Initiative",
+  description:
+    "A women-led social enterprise advancing food security, nutrition, and rural livelihoods across South Asia through sustainable aquaculture and community-rooted innovation.",
+};
+
 export default function HomePage() {
   const content = homepageContent;
 
@@ -38,14 +44,15 @@ export default function HomePage() {
           cta={content.hero.cta}
         />
 
-        <section className="py-14 md:py-20">
+        <section className="pb-14 pt-0 md:pb-20">
           <ContentContainer width="wide" padding="edge" className="space-y-10 md:space-y-14">
+            <ProofCardRow cards={[...content.proofCards]} />
             <SectionIntro
               label={content.proofIntro.label}
               title={content.proofIntro.title}
               body={content.proofIntro.body}
+              align="center"
             />
-            <ProofCardRow cards={[...content.proofCards]} />
           </ContentContainer>
         </section>
 
@@ -59,10 +66,8 @@ export default function HomePage() {
           <ContentContainer width="wide" padding="edge">
             <TestimonialFeature
               label={content.testimonial.label}
-              quote={content.testimonial.quote}
-              attribution={content.testimonial.attribution}
               context={content.testimonial.context}
-              imageAlt={content.testimonial.image.alt}
+              slides={[...content.testimonial.slides]}
             />
           </ContentContainer>
         </section>
@@ -84,9 +89,10 @@ export default function HomePage() {
               label={content.campaign.label}
               title={content.campaign.title}
               body={content.campaign.body}
-              imageAlt={content.campaign.image.alt}
+              images={[content.campaign.image]}
               cta={content.campaign.cta}
               align="left"
+              minHeight={content.campaign.minHeight}
             />
           </ContentContainer>
         </section>
@@ -99,6 +105,7 @@ export default function HomePage() {
               excerpt={content.inFocus.excerpt}
               date={content.inFocus.date}
               href={content.inFocus.cta.href}
+              linkLabel={content.inFocus.cta.label}
               thumbnails={[...content.inFocus.thumbnails]}
             />
           </ContentContainer>
@@ -110,22 +117,33 @@ export default function HomePage() {
               label={content.insights.label}
               title={content.insights.title}
               body={content.insights.body}
-              imageAlt={content.insights.image.alt}
+              images={[...content.insights.images]}
               cta={content.insights.cta}
               align="right"
+              layout="split"
+              mediaMode="contain"
+              minHeight={content.insights.minHeight}
             />
           </ContentContainer>
         </section>
 
         <section className="py-14 md:py-20">
-          <ContentContainer width="wide" padding="edge" className="space-y-10 md:space-y-14">
+          <ContentContainer
+            width="wide"
+            padding="edge"
+            className="space-y-10 border border-line/70 bg-brandGreen900 px-6 py-10 text-white md:space-y-14 md:px-8 md:py-12"
+          >
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-              <SectionIntro
-                label={content.features.label}
-                title={content.features.title}
-                body="Use these cards for stories, reports, press items, or thought pieces. The visual treatment intentionally stays restrained so strong writing does the work."
+              <div className="max-w-reading">
+                <p className="article-label !text-[#F0D27A]">{content.features.label}</p>
+                <h2 className="section-title mt-4 !text-white">{content.features.title}</h2>
+                <p className="section-intro mt-5 !text-white">{content.features.body}</p>
+              </div>
+              <ViewMoreButton
+                href="/what-we-do#stories"
+                label="View all stories"
+                className="border-white/58 text-white hover:border-[#F0D27A] hover:bg-[#F0D27A] hover:text-brandGreen900"
               />
-              <ViewMoreButton href="/what-we-do#stories" label="View all stories" />
             </div>
             <StoryGrid items={[...content.features.items]} />
           </ContentContainer>

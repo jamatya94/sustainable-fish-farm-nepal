@@ -4,6 +4,12 @@ import { SectionIntro } from "@/components/content/SectionIntro";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 
+export const metadata = {
+  title: "Search",
+  description:
+    "Search stories, reports, and learning across the Sustainable Fish Farming Initiative.",
+};
+
 export default function SearchPage() {
   return (
     <div className="min-h-screen bg-canvas">
@@ -12,8 +18,8 @@ export default function SearchPage() {
         <ContentContainer className="space-y-8">
           <SectionIntro
             label="Search"
-            title="Placeholder search page."
-            body="A search experience is not wired yet, but this page is ready for future indexing, filtering, or site search integration."
+            title="Search stories, reports, and field learning across the initiative."
+            body="Use search to explore updates on sustainable aquaculture, community partnership, women-led enterprise, and impact learning. Full indexing is still being connected, but this page is already set up to become the site’s archive entry point."
           />
           <form className="grid max-w-content gap-4 md:grid-cols-[1fr_auto]">
             <input
