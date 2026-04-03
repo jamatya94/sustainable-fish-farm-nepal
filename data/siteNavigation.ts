@@ -29,8 +29,7 @@ export const siteNavigation = {
         { label: "Our vision and values", href: "/about-us#vision", description: "The mission, principles, and commitments guiding the initiative." },
         { label: "Our model", href: "/about-us#model", description: "How sustainable aquaculture, partnership, and enterprise connect in practice." },
         { label: "Our organization", href: "/about-us#organization", description: "How SFFI is built to stay mission-led and accountable." },
-        { label: "Recognition", href: "/about-us#recognition", description: "How trust, partnership, and external validation strengthen the work." },
-        { label: "Reports", href: "/about-us#reports", description: "Where accountability updates and reporting will live." },
+        { label: "Recognition", href: "/about-us#recognition", description: "How founder visibility and external recognition support credibility." },
       ],
     },
     {
