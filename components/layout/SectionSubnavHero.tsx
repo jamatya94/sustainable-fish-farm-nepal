@@ -16,7 +16,7 @@ export function SectionSubnavHero({ label, title, body, items }: SectionSubnavHe
     <section className="border-b border-line pb-10 pt-8 md:pb-14 md:pt-12">
       <ContentContainer>
         <div className="max-w-content bg-brandGreen900 p-8 text-white md:p-10">
-          <p className="article-label !text-white/72">{label}</p>
+          <p className="article-label !text-[#F0D27A]">{label}</p>
           <h1 className="mt-4 text-4xl font-semibold leading-[0.98] tracking-[-0.03em] md:text-6xl">{title}</h1>
           <p className="mt-5 max-w-reading text-lg leading-8 text-white/82">{body}</p>
         </div>

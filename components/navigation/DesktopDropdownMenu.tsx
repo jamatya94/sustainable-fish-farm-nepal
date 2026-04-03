@@ -14,7 +14,7 @@ export function DesktopDropdownMenu({ group }: DesktopDropdownMenuProps) {
 
   if (!hasItems) {
     return (
-      <Link href={group.href} className="primary-nav-text transition hover:text-brandGreen900">
+      <Link href={group.href} className="primary-nav-text transition hover:text-brandGreen700">
         {group.label}
       </Link>
     );
@@ -28,7 +28,7 @@ export function DesktopDropdownMenu({ group }: DesktopDropdownMenuProps) {
     >
       <button
         type="button"
-        className="primary-nav-text inline-flex items-center transition hover:text-brandGreen900"
+        className="primary-nav-text inline-flex items-center transition hover:text-brandGreen700"
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((value) => !value)}
@@ -36,7 +36,7 @@ export function DesktopDropdownMenu({ group }: DesktopDropdownMenuProps) {
         {group.label}
       </button>
       {open ? (
-        <div className="absolute left-0 top-full z-30 mt-4 w-[360px] animate-dropdownIn border border-brandGreen700 bg-brandGreen900 p-5 text-white shadow-quiet">
+        <div className="absolute left-0 top-full z-30 mt-3 w-[360px] animate-dropdownIn border border-brandGreen700 bg-brandGreen900 p-5 text-white shadow-quiet">
           <ul className="space-y-4">
             {group.items?.map((item) => (
               <li key={item.href}>

@@ -45,24 +45,24 @@ export function LogoPlaceholder({
     }
 
     return (
-      <Link
-        href="/"
-        className={`inline-flex items-center text-brandGreen900 ${className}`.trim()}
-        aria-label="Homepage"
-      >
-        <span className="block">
-          <Image
-            src={resolvedLogo.src}
-            alt={resolvedLogo.alt}
+        <Link
+          href="/"
+          className={`inline-flex items-center text-brandGreen900 ${className}`.trim()}
+          aria-label="Homepage"
+        >
+          <span className="block">
+            <Image
+              src={resolvedLogo.src}
+              alt={resolvedLogo.alt}
             width={2133}
             height={1200}
             priority
-            sizes="(min-width: 1440px) 640px, (min-width: 1280px) 600px, (min-width: 1024px) 560px, (min-width: 768px) 380px, 260px"
-            className="h-auto w-[260px] sm:w-[300px] md:w-[380px] lg:w-[560px] xl:w-[600px] 2xl:w-[640px]"
+            sizes="(min-width: 1440px) 420px, (min-width: 1280px) 390px, (min-width: 1024px) 350px, (min-width: 768px) 320px, 230px"
+            className="h-auto w-[230px] sm:w-[255px] md:w-[320px] lg:w-[350px] xl:w-[390px] 2xl:w-[420px]"
             onError={() => setHasError(true)}
           />
         </span>
-      </Link>
+        </Link>
     );
   }
 
@@ -74,7 +74,7 @@ export function LogoPlaceholder({
         aria-label="Homepage"
       >
         <div className="flex h-16 w-16 items-center justify-center border border-white/35 bg-transparent text-[0.68rem] font-bold uppercase tracking-[0.18em] md:h-[4.5rem] md:w-[4.5rem]">
-          N P
+          S F
         </div>
       </Link>
     );
@@ -87,14 +87,14 @@ export function LogoPlaceholder({
       aria-label="Homepage"
     >
       <div className="flex h-12 w-12 items-center justify-center border border-brandGreen900 bg-surface text-[0.68rem] font-bold uppercase tracking-[0.18em] shadow-[inset_0_0_0_1px_rgba(19,90,75,0.08)]">
-        N P
+        S F
       </div>
       <div className="border-l border-line pl-4">
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brandGreen700">
-          Placeholder brand
+          Sustainable Fish Farming
         </p>
         <p className="mt-1 text-[1.06rem] font-semibold leading-tight tracking-[-0.02em]">
-          Nonprofit Organization
+          Initiative
         </p>
       </div>
     </Link>

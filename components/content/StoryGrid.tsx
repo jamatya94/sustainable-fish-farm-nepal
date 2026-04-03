@@ -12,9 +12,9 @@ type StoryGridProps = {
 
 export function StoryGrid({ items }: StoryGridProps) {
   return (
-    <div className="grid gap-x-10 gap-y-10 md:grid-cols-2 xl:grid-cols-4 xl:gap-x-12">
-      {items.map((item) => (
-        <StoryCard key={`${item.title}-${item.date}`} {...item} />
+    <div className="grid overflow-hidden border border-line/80 md:grid-cols-2 xl:grid-cols-4">
+      {items.map((item, index) => (
+        <StoryCard key={`${item.title}-${item.date}`} index={index} {...item} />
       ))}
     </div>
   );
