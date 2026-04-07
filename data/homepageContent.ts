@@ -24,10 +24,6 @@ export const homepageContent = {
     slabTitle: "A women-led social enterprise advancing food security, nutrition, and rural livelihoods across South Asia.",
     slabBody:
       "Development rooted in dignity and shaped by possibility, where rural communities not only survive, but thrive.",
-    cta: {
-      label: "Explore Our Work",
-      href: "/what-we-do",
-    },
   },
   proofIntro: {
     label: "Why supporters stay with us",
@@ -69,6 +65,35 @@ export const homepageContent = {
       body: "SFFI advances practical solutions that improve nutrition, livelihoods, and long-term rural resilience.",
     },
   ],
+  impactStats: {
+    label: "Impact at a glance",
+    stats: [
+      {
+        value: 100000,
+        label: "farmers uplifted",
+        suffix: "+",
+        duration: 2200,
+      },
+      {
+        value: 50,
+        label: "communities reached",
+        suffix: "+",
+        duration: 1700,
+      },
+      {
+        value: 20,
+        label: "partners mobilized",
+        suffix: "+",
+        duration: 1650,
+      },
+      {
+        value: 200,
+        label: "training/demo sessions",
+        suffix: "+",
+        duration: 1850,
+      },
+    ],
+  },
   donationBanner: {
     title: "Support a bold, community-rooted response to hunger, poverty, and malnutrition.",
     body:
@@ -86,7 +111,7 @@ export const homepageContent = {
     },
     secondaryCta: {
       label: "Learn how donations work",
-      href: "/about-us#reports",
+      href: "/our-impact#measurement",
     },
   },
   testimonial: {
@@ -168,55 +193,6 @@ export const homepageContent = {
       },
     ],
   },
-  insights: {
-    label: "Insights and data",
-    title: "Evidence can be human, visual, and precise at the same time.",
-    body:
-      "SFFI believes development should be measurable, inclusive, and grounded in lived experience. By combining field-based learning, farmer partnership, and practical innovation, it shows how investments in livelihoods, nutrition, women’s leadership, and local systems can generate meaningful and lasting outcomes.",
-    images: [
-      {
-        src: "/homepage/00-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set one.",
-      },
-      {
-        src: "/homepage/001-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set two.",
-      },
-      {
-        src: "/homepage/01-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set three.",
-      },
-      {
-        src: "/homepage/02-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set four.",
-      },
-      {
-        src: "/homepage/03-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set five.",
-      },
-      {
-        src: "/homepage/004-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set six.",
-      },
-      {
-        src: "/homepage/005-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set seven.",
-      },
-      {
-        src: "/homepage/006-program-notes.jpg",
-        alt: "Field image from program notes and learning documentation set eight.",
-      },
-      {
-        src: "/homepage/10257267_711098368953572_8951827543240347444_o.jpg",
-        alt: "Field image from program notes and learning documentation set nine.",
-      },
-    ],
-    minHeight: 600,
-    cta: {
-      label: "Review our impact",
-      href: "/our-impact#insights",
-    },
-  },
   features: {
     label: "Features and stories",
     title: "Stories, learning, and field insight from a movement building a future beyond hunger.",
@@ -224,31 +200,35 @@ export const homepageContent = {
       "Explore the people, lessons, and local realities shaping SFFI’s work from field updates and research notes to reflections on women’s leadership, food systems, inclusive livelihoods, and rural transformation in South Asia.",
     items: [
       {
-        label: "Field update",
-        title: "How sustainable aquaculture is helping communities strengthen food security and livelihoods",
-        excerpt: "Through training, enterprise support, and community partnership, SFFI is helping farming households improve food access, build more secure incomes, and strengthen resilience over time.",
-        href: "/what-we-do#stories",
-        date: "January 2024",
+        label: "Farmer story",
+        title: "Her Farm, Her Strength: How Sumnima is building a more secure future in Chitwan",
+        excerpt:
+          "Through a project in Chitwan, SFFI trained 250 farmers and provided microfinance grants to women farmers, helping expand both skills and opportunity. For Sumnima, 28, that support is now helping transform fish farming into a more reliable livelihood and a stronger foundation for her family’s future.",
+        href: "/stories/sumnima-chitwan",
+        date: "August 2025",
       },
       {
         label: "Research",
-        title: "Why nutrition-sensitive livelihoods matter in the fight against rural poverty",
-        excerpt: "When communities have access to practical enterprise pathways that also strengthen local food systems, they are better positioned to reduce vulnerability, improve nutrition, and build lasting prosperity.",
-        href: "/our-impact#insights",
-        date: "March 2023",
+        title: "From data to impact: How gender insights help farmers prosper",
+        excerpt:
+          "Gender-responsive learning helped SFFI see where women were still facing barriers in fish farming and how better-targeted support could improve outcomes. In Nepal, this approach strengthened the connection between technical training, women-centered finance, stronger livelihoods, and more secure households.",
+        href: "/stories/gender-insights-impact",
+        date: "May 2025",
       },
       {
-        label: "Leadership note",
-        title: "Women’s economic leadership is central to ending hunger and building resilient communities",
-        excerpt: "SFFI’s work is grounded in a simple proposition: when women gain access to productive opportunity, the returns are economic, nutritional, social, and intergenerational.",
-        href: "/about-us#organization",
-        date: "July 2023",
+        label: "Field update",
+        title: "Fish Farming in Dhading Is Strengthening Rural Livelihoods",
+        excerpt:
+          "In Baseri Village, Dhading, SFFI delivered 20 technical trainings reaching 500 farmers, helping rural households strengthen fish farming as a pathway to improved nutrition, more stable income, and greater resilience. Rooted in practical, community-based learning, the project equipped farmers with the skills to improve productivity and reduce risk. For women like Mandira, a single mother of five, that support helped launch a new livelihood and increase household income by 90%.",
+        href: "/stories/dhading-fish-farming",
+        date: "April 2024",
       },
       {
-        label: "Community story",
-        title: "From vulnerability to resilience",
-        excerpt: "Behind every rural household is a story of labor, aspiration, and untapped potential. With the right support, communities can build futures defined not by deprivation, but by dignity, capability, and opportunity.",
-        href: "/what-we-do#stories",
+        label: "Award feature",
+        title: "Cultivating Change: SFFI’s SDG Innovation Award for Sustainable Aquaculture",
+        excerpt:
+          "SFFI’s SDG Innovation Award for Sustainable Aquaculture was created to honor grassroots innovators shaping a more sustainable, inclusive, and resilient future for aquaculture in Nepal. By recognizing community-rooted leadership, the award helped amplify ideas that were advancing food systems, livelihoods, and youth-led innovation.",
+        href: "/stories/sdg-innovation-award",
         date: "August 2024",
       },
     ],

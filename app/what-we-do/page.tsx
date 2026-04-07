@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AngularButton } from "@/components/cta/AngularButton";
+import { StoryGrid } from "@/components/content/StoryGrid";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { SectionSubnavHero } from "@/components/layout/SectionSubnavHero";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
+import { homepageContent } from "@/data/homepageContent";
 import { siteNavigation } from "@/data/siteNavigation";
 
 const operatingPillars = [
@@ -102,42 +103,6 @@ const geographyHighlights = [
   },
 ];
 
-const fieldStories = [
-  {
-    label: "Field story",
-    title: "A pond can become a platform for household stability when training is practical enough to use.",
-    body:
-      "In village settings where risk is already high, households need methods they can trust. SFFI’s field approach is built around step-by-step accompaniment that helps producers translate technical guidance into daily action. That makes the work more grounded, more usable, and more likely to hold under real rural constraints.",
-    image: {
-      src: "/homepage/support-the-mission.jpg",
-      alt: "Young students and community members gathered in a classroom setting.",
-      position: "center center",
-    },
-  },
-  {
-    label: "Village leadership",
-    title: "When women are visible in enterprise, the effects reach beyond a single income stream.",
-    body:
-      "One of the strongest signals of progress is not only whether production improves, but whether women gain more voice in how livelihoods are discussed, organized, and valued. SFFI’s model treats that shift as essential to stronger communities, not incidental to them.",
-    image: {
-      src: "/homepage/local partner-001.jpg",
-      alt: "Community partner in Nepal standing outdoors in a rural setting.",
-      position: "center 26%",
-    },
-  },
-  {
-    label: "Local partnership",
-    title: "Trusted community relationships make the difference between activity and durable progress.",
-    body:
-      "Programs move further when they begin with the realities communities already understand. SFFI’s operating discipline is to start from local priorities, build credibility through presence and follow-through, and let that trust become the basis for stronger coordination and longer-term change.",
-    image: {
-      src: "/homepage/01-program-notes.jpg",
-      alt: "Field learning image from rural aquaculture documentation.",
-      position: "center center",
-    },
-  },
-];
-
 export const metadata = {
   title: "What We Do",
   description:
@@ -145,6 +110,7 @@ export const metadata = {
 };
 
 export default function WhatWeDoPage() {
+  const content = homepageContent;
   const items = siteNavigation.primary.find((item) => item.href === "/what-we-do")?.items ?? [];
 
   return (
@@ -253,46 +219,18 @@ export default function WhatWeDoPage() {
           </ContentContainer>
         </section>
 
-        <section id="stories" className="py-12 md:py-16">
-          <ContentContainer width="wide" padding="edge" className="space-y-8 md:space-y-10">
-            <div className="max-w-[50rem]">
-              <p className="article-label">Stories and field notes</p>
-              <h2 className="section-title mt-4">
-                What the work looks like when it is close enough to real villages to be useful.
-              </h2>
-              <p className="section-intro mt-5">
-                Investor confidence should come not only from mission language, but from a credible sense of how the
-                work actually lands on the ground. These field notes illustrate the kind of practical, community-rooted
-                change SFFI is designed to support across rural Nepal and its learning partnerships in India.
-              </p>
+        <section
+          id="stories"
+          className="border border-line/70 bg-brandGreen900 px-gutter-mobile py-10 text-white md:px-gutter-tablet md:py-12 lg:px-6 xl:px-8 2xl:px-10"
+        >
+          <div className="mx-auto w-full max-w-wide space-y-10 md:space-y-14">
+            <div className="max-w-reading">
+              <p className="article-label !text-[#F0D27A]">{content.features.label}</p>
+              <h2 className="section-title mt-4 !text-white">{content.features.title}</h2>
+              <p className="section-intro mt-5 !text-white">{content.features.body}</p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-3">
-              {fieldStories.map((story) => (
-                <article key={story.title} className="overflow-hidden border border-line/70 bg-surface">
-                  <div className="relative aspect-[4/3] bg-[#DED3BC]">
-                    <Image
-                      src={story.image.src}
-                      alt={story.image.alt}
-                      fill
-                      sizes="(min-width: 1280px) 420px, 100vw"
-                      className="object-cover"
-                      style={{ objectPosition: story.image.position }}
-                    />
-                  </div>
-                  <div className="p-6 md:p-7">
-                    <p className="article-label">{story.label}</p>
-                    <h3 className="mt-4 text-[1.55rem] font-semibold leading-snug tracking-[-0.03em] text-text">
-                      {story.title}
-                    </h3>
-                    <p className="mt-4 text-base leading-7 text-textMuted">{story.body}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="pt-2">
-              <AngularButton href="/our-impact#insights">Review our impact framework</AngularButton>
-            </div>
-          </ContentContainer>
+            <StoryGrid items={[...content.features.items]} />
+          </div>
         </section>
       </main>
       <SiteFooter />

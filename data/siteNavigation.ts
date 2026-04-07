@@ -29,7 +29,6 @@ export const siteNavigation = {
         { label: "Our vision and values", href: "/about-us#vision", description: "The mission, principles, and commitments guiding the initiative." },
         { label: "Our model", href: "/about-us#model", description: "How sustainable aquaculture, partnership, and enterprise connect in practice." },
         { label: "Our organization", href: "/about-us#organization", description: "How SFFI is built to stay mission-led and accountable." },
-        { label: "Recognition", href: "/about-us#recognition", description: "How founder visibility and external recognition support credibility." },
       ],
     },
     {
@@ -52,7 +51,6 @@ export const siteNavigation = {
         { label: "Women’s leadership and inclusion", href: "/our-impact#womens-leadership-and-inclusion", description: "How inclusion and decision-making are treated as real outcomes." },
         { label: "Evaluations", href: "/our-impact#evaluations", description: "Formal review, reflection, and learning over time." },
         { label: "How we measure impact", href: "/our-impact#measurement", description: "The indicators, feedback loops, and learning methods behind the work." },
-        { label: "Insights and data", href: "/our-impact#insights", description: "Research notes, evidence framing, and data-informed storytelling." },
       ],
     },
     {

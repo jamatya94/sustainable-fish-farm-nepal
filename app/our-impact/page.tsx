@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AngularButton } from "@/components/cta/AngularButton";
 import { ContentContainer } from "@/components/layout/ContentContainer";
 import { SectionSubnavHero } from "@/components/layout/SectionSubnavHero";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
@@ -128,42 +127,6 @@ const measurementAreas = [
   {
     label: "Learning and adaptation",
     body: "Use field notes, partner feedback, and periodic review to refine what should be strengthened, repeated, or changed.",
-  },
-];
-
-const reportDrafts = [
-  {
-    label: "2024 field learning brief",
-    title: "What it takes for aquaculture support to become credible at village level.",
-    body:
-      "A practical reflection on trust, accompaniment, and the operational realities that shape whether training turns into durable village-level uptake.",
-    image: {
-      src: "/homepage/00-program-notes.jpg",
-      alt: "Program notes image showing field learning activity.",
-      position: "center center",
-    },
-  },
-  {
-    label: "Livelihoods note",
-    title: "Linking fish farming, microfinance, and local markets in rural household strategy.",
-    body:
-      "An early reporting draft on how enterprise support, financing pathways, and local market relationships interact in shaping livelihood resilience.",
-    image: {
-      src: "/homepage/02-program-notes.jpg",
-      alt: "Program notes image showing rural field context.",
-      position: "center center",
-    },
-  },
-  {
-    label: "Women-led enterprise note",
-    title: "Why women’s visibility in enterprise changes how communities understand opportunity.",
-    body:
-      "A narrative report draft on women’s leadership, local confidence, and why participation must be measured as voice and agency, not only attendance.",
-    image: {
-      src: "/homepage/local partner-001.jpg",
-      alt: "Community partner in Nepal outdoors.",
-      position: "center 28%",
-    },
   },
 ];
 
@@ -299,50 +262,6 @@ export default function OurImpactPage() {
                 <article key={area.label} className="border border-line/70 bg-surface p-6">
                   <p className="article-label">{area.label}</p>
                   <p className="mt-4 text-base leading-7 text-textMuted">{area.body}</p>
-                </article>
-              ))}
-            </div>
-          </ContentContainer>
-        </section>
-
-        <section id="insights" className="border-t border-line py-12 md:py-16">
-          <ContentContainer width="wide" padding="edge" className="space-y-8 md:space-y-10">
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.76fr)_minmax(0,1.24fr)] lg:items-end">
-              <div className="max-w-[42rem]">
-                <p className="article-label">Insights and data</p>
-                <h2 className="section-title mt-4">
-                  Early reporting can already show how SFFI thinks, learns, and documents rural change.
-                </h2>
-                <p className="section-intro mt-5">
-                  While a fuller reporting archive will continue to grow, the page below now frames the kind of
-                  evidence SFFI intends to share: field learning, livelihoods analysis, reflections on women-led
-                  enterprise, and practical documentation grounded in community experience.
-                </p>
-              </div>
-              <div className="lg:justify-self-end">
-                <AngularButton href="/what-we-do#stories">See program context</AngularButton>
-              </div>
-            </div>
-            <div className="grid gap-5 lg:grid-cols-3">
-              {reportDrafts.map((report) => (
-                <article key={report.title} className="overflow-hidden border border-line/70 bg-surface">
-                  <div className="relative aspect-[4/3] bg-[#DED3BC]">
-                    <Image
-                      src={report.image.src}
-                      alt={report.image.alt}
-                      fill
-                      sizes="(min-width: 1280px) 420px, 100vw"
-                      className="object-cover"
-                      style={{ objectPosition: report.image.position }}
-                    />
-                  </div>
-                  <div className="p-6 md:p-7">
-                    <p className="article-label">{report.label}</p>
-                    <h3 className="mt-4 text-[1.55rem] font-semibold leading-snug tracking-[-0.03em] text-text">
-                      {report.title}
-                    </h3>
-                    <p className="mt-4 text-base leading-7 text-textMuted">{report.body}</p>
-                  </div>
                 </article>
               ))}
             </div>
