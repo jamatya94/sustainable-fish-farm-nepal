@@ -39,7 +39,6 @@ export default function HomePage() {
           slabLabel={content.hero.slabLabel}
           slabTitle={content.hero.slabTitle}
           slabBody={content.hero.slabBody}
-          cta={content.hero.cta}
         />
 
         <section className="pb-0 pt-0">
@@ -75,20 +74,6 @@ export default function HomePage() {
             cta={content.campaign.cta}
             align="left"
             minHeight={content.campaign.minHeight}
-          />
-        </section>
-
-        <section className="py-0">
-          <SectionImageSlab
-            label={content.insights.label}
-            title={content.insights.title}
-            body={content.insights.body}
-            images={[...content.insights.images]}
-            cta={content.insights.cta}
-            align="right"
-            layout="split"
-            mediaMode="contain"
-            minHeight={content.insights.minHeight}
           />
         </section>
 

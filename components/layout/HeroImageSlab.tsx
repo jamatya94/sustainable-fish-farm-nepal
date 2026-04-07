@@ -11,7 +11,7 @@ type HeroImageSlabProps = {
   slabLabel: string;
   slabTitle: string;
   slabBody: string;
-  cta: {
+  cta?: {
     label: string;
     href: string;
   };
@@ -72,9 +72,11 @@ export function HeroImageSlab({
               <p className="mt-5 max-w-[28rem] text-[0.95rem] leading-7 text-[#F8F6EF] [text-shadow:0_2px_18px_rgba(0,0,0,0.24)] md:text-[1rem] md:leading-7 lg:mt-6 lg:text-[1.04rem]">
                 {body}
               </p>
-              <div className="mt-7 md:mt-8">
-                <AngularButton href={cta.href}>{cta.label}</AngularButton>
-              </div>
+              {cta ? (
+                <div className="mt-7 md:mt-8">
+                  <AngularButton href={cta.href}>{cta.label}</AngularButton>
+                </div>
+              ) : null}
             </div>
           </div>
 

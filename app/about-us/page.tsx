@@ -65,27 +65,6 @@ const organizationBlocks = [
   },
 ];
 
-const recognitionItems = [
-  {
-    label: "Founder recognition",
-    title: "Kanchan Amatya’s public recognition helps signal the seriousness and credibility of the initiative’s founding vision.",
-    body:
-      "Public profiles and award listings identify SFFI founder Kanchan Amatya with recognitions including Forbes 30 Under 30 Asia, the Women Economic Forum, and Global Seafood Alliance’s 30 Under 30. Those recognitions do not substitute for field results, but they do matter as external signals that the organization’s model has attracted credible international attention.",
-  },
-  {
-    label: "Mission legitimacy",
-    title: "The organization’s story is strengthened by a founder whose work has been recognized in both social enterprise and women’s empowerment circles.",
-    body:
-      "That combination is particularly relevant for SFFI because its operating model sits at the intersection of anti-poverty work, food security, aquaculture, and women-led development. Recognition in these spaces reinforces the initiative’s broader strategic positioning.",
-  },
-  {
-    label: "What recognition means here",
-    title: "SFFI treats visibility as a responsibility to keep building substance behind the story.",
-    body:
-      "Recognition is most useful when it creates stronger accountability: to communities, to partners, and to future supporters who want evidence that the organization can translate vision into durable practice on the ground.",
-  },
-];
-
 export const metadata = {
   title: "About Us",
   description:
@@ -93,10 +72,7 @@ export const metadata = {
 };
 
 export default function AboutUsPage() {
-  const items =
-    siteNavigation.primary
-      .find((item) => item.href === "/about-us")
-      ?.items?.filter((item) => item.href !== "/about-us#reports") ?? [];
+  const items = siteNavigation.primary.find((item) => item.href === "/about-us")?.items ?? [];
 
   return (
     <div className="min-h-screen bg-canvas">
@@ -194,35 +170,6 @@ export default function AboutUsPage() {
                 ))}
               </div>
             </div>
-          </section>
-
-          <section id="recognition" className="border-y border-line bg-[#F4F1E8] py-12 md:py-16">
-            <ContentContainer width="wide" padding="edge" className="space-y-8 md:space-y-10">
-              <div className="max-w-[50rem]">
-                <p className="article-label">Recognition</p>
-                <h2 className="section-title mt-4">
-                  Recognition matters here because it helps map the credibility of the organization’s founding leadership and mission.
-                </h2>
-                <p className="section-intro mt-5">
-                  Based on public profiles and award listings, SFFI founder Kanchan Amatya has been associated with
-                  recognitions including Forbes 30 Under 30 Asia, the Women Economic Forum, and Global Seafood
-                  Alliance’s 30 Under 30. Those acknowledgements help show that the initiative’s founding vision has
-                  resonated beyond local circles, even as the long-term test remains what the work delivers in
-                  communities.
-                </p>
-              </div>
-              <div className="grid gap-4 md:grid-cols-3">
-                {recognitionItems.map((item) => (
-                  <article key={item.label} className="border border-line/70 bg-white p-6 md:p-7">
-                    <p className="article-label">{item.label}</p>
-                    <h3 className="mt-4 text-[1.45rem] font-semibold leading-snug tracking-[-0.03em] text-text">
-                      {item.title}
-                    </h3>
-                    <p className="mt-4 text-base leading-7 text-textMuted">{item.body}</p>
-                  </article>
-                ))}
-              </div>
-            </ContentContainer>
           </section>
         </ContentContainer>
       </main>
