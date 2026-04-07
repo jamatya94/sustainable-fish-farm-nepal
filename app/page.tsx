@@ -2,10 +2,10 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { DonationSplitBanner } from "@/components/cta/DonationSplitBanner";
 import { NewsletterSignupBar } from "@/components/cta/NewsletterSignupBar";
 import { ViewMoreButton } from "@/components/cta/ViewMoreButton";
+import { ImpactStatsSection } from "@/components/content/ImpactStatsSection";
 import { ProofCardRow } from "@/components/content/ProofCardRow";
 import { StoryGrid } from "@/components/content/StoryGrid";
 import { TestimonialFeature } from "@/components/content/TestimonialFeature";
-import { ContentContainer } from "@/components/layout/ContentContainer";
 import { HeroImageSlab } from "@/components/layout/HeroImageSlab";
 import { SectionImageSlab } from "@/components/layout/SectionImageSlab";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
@@ -42,61 +42,58 @@ export default function HomePage() {
           cta={content.hero.cta}
         />
 
-        <section className="pb-8 pt-6 md:pb-10 md:pt-8">
-          <ContentContainer width="wide" padding="edge" className="space-y-5 md:space-y-7">
-            <div className="flex justify-center">
+        <section className="pb-0 pt-0">
+          <div className="space-y-5 md:space-y-7">
+            <div className="flex justify-center px-gutter-mobile pt-4 md:px-gutter-tablet md:pt-5 lg:px-6 xl:px-8 2xl:px-10">
               <p className="article-label">{content.proofIntro.label}</p>
             </div>
             <ProofCardRow cards={[...content.proofCards]} />
-          </ContentContainer>
+          </div>
         </section>
 
-        <section className="py-8 md:py-10">
-          <ContentContainer width="wide" padding="edge">
-            <TestimonialFeature
-              label={content.testimonial.label}
-              context={content.testimonial.context}
-              slides={[...content.testimonial.slides]}
-            />
-          </ContentContainer>
+        <section className="py-0">
+          <ImpactStatsSection
+            label={content.impactStats.label}
+            stats={[...content.impactStats.stats]}
+          />
         </section>
 
-        <section className="py-8 md:py-10">
-          <ContentContainer width="wide" padding="edge">
-            <SectionImageSlab
-              label={content.campaign.label}
-              title={content.campaign.title}
-              body={content.campaign.body}
-              images={[content.campaign.image]}
-              cta={content.campaign.cta}
-              align="left"
-              minHeight={content.campaign.minHeight}
-            />
-          </ContentContainer>
+        <section className="py-0">
+          <TestimonialFeature
+            label={content.testimonial.label}
+            context={content.testimonial.context}
+            slides={[...content.testimonial.slides]}
+          />
         </section>
 
-        <section className="py-8 md:py-10">
-          <ContentContainer width="wide" padding="edge">
-            <SectionImageSlab
-              label={content.insights.label}
-              title={content.insights.title}
-              body={content.insights.body}
-              images={[...content.insights.images]}
-              cta={content.insights.cta}
-              align="right"
-              layout="split"
-              mediaMode="contain"
-              minHeight={content.insights.minHeight}
-            />
-          </ContentContainer>
+        <section className="py-0">
+          <SectionImageSlab
+            label={content.campaign.label}
+            title={content.campaign.title}
+            body={content.campaign.body}
+            images={[content.campaign.image]}
+            cta={content.campaign.cta}
+            align="left"
+            minHeight={content.campaign.minHeight}
+          />
         </section>
 
-        <section className="py-8 md:py-10">
-          <ContentContainer
-            width="wide"
-            padding="edge"
-            className="space-y-10 border border-line/70 bg-brandGreen900 px-6 py-10 text-white md:space-y-14 md:px-8 md:py-12"
-          >
+        <section className="py-0">
+          <SectionImageSlab
+            label={content.insights.label}
+            title={content.insights.title}
+            body={content.insights.body}
+            images={[...content.insights.images]}
+            cta={content.insights.cta}
+            align="right"
+            layout="split"
+            mediaMode="contain"
+            minHeight={content.insights.minHeight}
+          />
+        </section>
+
+        <section className="border border-line/70 bg-brandGreen900 px-gutter-mobile py-10 text-white md:px-gutter-tablet md:py-12 lg:px-6 xl:px-8 2xl:px-10">
+          <div className="mx-auto w-full max-w-wide space-y-10 md:space-y-14">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-reading">
                 <p className="article-label !text-[#F0D27A]">{content.features.label}</p>
@@ -110,24 +107,20 @@ export default function HomePage() {
               />
             </div>
             <StoryGrid items={[...content.features.items]} />
-          </ContentContainer>
+          </div>
         </section>
 
-        <section className="py-4 md:py-5">
-          <ContentContainer width="wide" padding="edge">
-            <DonationSplitBanner {...content.donationBanner} />
-          </ContentContainer>
+        <section className="py-0">
+          <DonationSplitBanner {...content.donationBanner} />
         </section>
 
-        <section className="py-4 md:py-5">
-          <ContentContainer width="wide" padding="edge">
-            <NewsletterSignupBar
-              title={content.newsletter.title}
-              body={content.newsletter.body}
-              placeholder={content.newsletter.placeholder}
-              buttonLabel={content.newsletter.buttonLabel}
-            />
-          </ContentContainer>
+        <section className="py-0">
+          <NewsletterSignupBar
+            title={content.newsletter.title}
+            body={content.newsletter.body}
+            placeholder={content.newsletter.placeholder}
+            buttonLabel={content.newsletter.buttonLabel}
+          />
         </section>
       </main>
       <SiteFooter />

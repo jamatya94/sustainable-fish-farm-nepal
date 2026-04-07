@@ -69,6 +69,35 @@ export const homepageContent = {
       body: "SFFI advances practical solutions that improve nutrition, livelihoods, and long-term rural resilience.",
     },
   ],
+  impactStats: {
+    label: "Impact at a glance",
+    stats: [
+      {
+        value: 100000,
+        label: "farmers uplifted",
+        suffix: "+",
+        duration: 2200,
+      },
+      {
+        value: 50,
+        label: "communities reached",
+        suffix: "+",
+        duration: 1700,
+      },
+      {
+        value: 20,
+        label: "partners mobilized",
+        suffix: "+",
+        duration: 1650,
+      },
+      {
+        value: 200,
+        label: "training/demo sessions",
+        suffix: "+",
+        duration: 1850,
+      },
+    ],
+  },
   donationBanner: {
     title: "Support a bold, community-rooted response to hunger, poverty, and malnutrition.",
     body:
